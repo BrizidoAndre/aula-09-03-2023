@@ -1,18 +1,18 @@
 /* Importando as fontes necessarias para o projeto */
 @font-face {
-    font-family: Titil-Black;
+    font-family: titil-black;
     src: url(../assets/fonts/TitilliumWeb-Black.ttf);
 }
 @font-face {
-    font-family: Titil-Bold;
+    font-family: titil-bold;
     src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
 }
 @font-face {
-    font-family: Quicksand;
+    font-family: quicksand;
     src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: Inter;
+    font-family: inter;
     src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 *{
@@ -24,7 +24,59 @@ h1{
     font-family: TitilliumWeb-Black;
     font-size: 80px;
     text-shadow: 1px 1px 1px #FD4255;
+    color: white;
+}
+h2{
+    font-family: titil-black;
+    font-size: 40px;
+    color: white;
+}
+body{
+    background-color: #1B1426;
+    color: white;
+}
+/* Classes genericas */
+.layout-grid{
+    width: 90vw;
+    height: 100%;
+
+    margin: 0 auto;
+    border: 1px solid salmon;
+}
+.a{
+    text-decoration: none;
 }
 /* Mobile First */
-header .headertop .contatos .phone{
+/* HEADER BACKGROUND */
+header{
+    background-color: #1B1426;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* HEADER */
+header .headertop{
+    display: none;
+}
+header .betweencenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .headerbottom .logo{
+    width: 86px;
+}
+header .headerbottom .menuesquerdo{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    height: calc(100vh - 60px);
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.403);
+    border: 1px solid white;
 }
