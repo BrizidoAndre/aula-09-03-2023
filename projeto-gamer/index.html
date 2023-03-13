@@ -51,7 +51,7 @@
                     alt="Logotipo da empresa. Texto Gamer com um joystick no centro.">
 
                 <nav class="menu">
-                    <div class="menuesquerdo">
+                    <div class="menuesquerdo" id="menuesquerdo">
                         <a id="first" href="">Inicio</a>
                         <a href="">Jogadores</a>
                         <a href="">Equipes</a>
@@ -112,7 +112,8 @@
     </header>
     <script>
         function mostrarmenuesquerdo(){
-            alert("Bora abrir o menu");
+            document.getElementById("menuesquerdo").classList.toggle("mostrarmenu");
+
         }
     </script>
 </body>
