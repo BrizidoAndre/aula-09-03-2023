@@ -21,15 +21,17 @@
     box-sizing: border-box;
 }
 h1{
-    font-family: TitilliumWeb-Black;
+    font-family: titil-black;
     font-size: 80px;
-    text-shadow: 1px 1px 1px #FD4255;
+    text-shadow: 5px 5px 25px #FD4255;
     color: white;
+    text-transform: capitalize;
 }
 h2{
     font-family: titil-black;
     font-size: 40px;
     color: white;
+    text-transform: capitalize;
 }
 body{
     background-color: #1B1426;
@@ -43,10 +45,20 @@ body{
     display: flex;
 
     margin: 0 auto;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .a{
     text-decoration: none;
+}
+/* ANIMACOES PARA A ABERTURA DOS MENUS LATERAIS */
+/* O !important serve para aumentar o grau de importancia da regra */
+header .headerbottom .mostrarmenuesquerdo{
+    left: 0 !important;
+    opacity: 1 !important;
+}
+header .headerbottom .mostrarmenudireito{
+    right: 0 !important;
+    opacity: 1 !important;
 }
 /* Mobile First */
 /* HEADER BACKGROUND */
@@ -71,6 +83,9 @@ header .betweencenter{
 
 }
 /* VER ESSA MERDA EM CASA PQ TA DANDO MERDA PUTA QUEO PARIU QUE BAGULHO CHATO */
+header .headerbottom{
+    position: fixed;
+}
 header .headerbottom .logo{
     width: 86px;
     position: relative;
@@ -90,6 +105,8 @@ header .headerbottom .menuesquerdo{
     background-image: linear-gradient(to right bottom, rgba( 27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
 
+    transition: 0.5s;
+    opacity: 0;
     z-index: 20;
 }
 header .headerbottom .menu .menuesquerdo a{
@@ -118,6 +135,59 @@ header .headerbottom .menu .midiasmobile {
 header .headerbottom .menu .midiasmobile a{
     border-bottom: none;
 }
-header .headerbottom .menuperfil{
-    display: none;
+header .headerbottom #menudireito{
+    position: fixed;
+    top: 60px;
+    right: -20vw;
+    width: 20vw;
+
+    opacity: 0;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+
+    padding: 20px;
+
+    background-color: white;
+    background-image: linear-gradient(to right bottom, rgba( 27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+}
+main{
+    margin-top: 60px;
+}
+main .banner{
+    width: 100vw;
+    height: 606px;
+    background-color: #1B1426;
+    background-image:url(../assets/images/background/valorant-pergunte-3-scaled\ 1\ 1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .banner > h1{
+    font-size: 40px;
+}
+main .banner .botaosobre{
+    background-color: #f9aa01;
+    border-radius: 8px;
+    margin-bottom: 85px;
+    width: 171px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    font-family: titil-black;
+    font-weight: bold;
+    font-size: 24px;
 }

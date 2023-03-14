@@ -87,11 +87,11 @@
                     </div>
                 </nav>
                     <!-- Menu tres pontinhos -->
-                    <img src="../projeto-gamer/assets/images/Icons/Icon-menu/Menu lateral direito.png"
+                    <img onclick="mostrarmenudireito()" class="menupontos" src="../projeto-gamer/assets/images/Icons/Icon-menu/Menu lateral direito.png"
                         alt="icone de tres pontos que abre o menu lateral direito">
                     <!-- Inicio da nav] -->
-                <nav class="menuperfil">
-                    <div class="menudireito">
+                <nav class="menudireito" id="menudireito">
+                    
                         <a href="">
                             <img src="../projeto-gamer/assets/images/Icons/icon-white/Projeto Gamer/Vector-1.png"
                             alt="icone de usuario">
@@ -104,7 +104,6 @@
                             <img src="../projeto-gamer/assets/images/Icons/icon-white/Projeto Gamer/Vector (6) 1.png"
                             alt="icone de lupa/busca">
                         </a>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -112,10 +111,18 @@
     </header>
     <script>
         function mostrarmenuesquerdo(){
-            document.getElementById("menuesquerdo").classList.toggle("mostrarmenu");
-
+            document.getElementById("menuesquerdo").classList.toggle("mostrarmenuesquerdo");
+        }
+        function mostrarmenudireito(){
+            document.getElementById("menudireito").classList.toggle("mostrarmenudireito");
         }
     </script>
+    <main>
+        <section class="banner">
+            <h1>liga gamers</h1>
+            <a class="botaosobre">Sobre</a>
+        </section>
+    </main>
 </body>
 
 </html>
