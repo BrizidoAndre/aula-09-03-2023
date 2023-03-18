@@ -1,18 +1,14 @@
 /* Importando as fontes necessarias para o projeto */
-@font-face {
-    font-family: titil-black;
+@font-face {font-family: titil-black;
     src: url(../assets/fonts/TitilliumWeb-Black.ttf);
 }
-@font-face {
-    font-family: titil-bold;
+@font-face {font-family: titil-bold;
     src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
 }
-@font-face {
-    font-family: quicksand;
+@font-face {font-family: quicksand;
     src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
 }
-@font-face {
-    font-family: inter;
+@font-face {font-family: inter;
     src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 *{
@@ -40,9 +36,6 @@ body{
 /* Classes genericas */
 .layout-grid{
     width: 90vw;
-    height: 100%;
-
-    display: flex;
 
     margin: 0 auto;
     /* border: 1px solid salmon; */
@@ -61,35 +54,27 @@ header .headerbottom .mostrarmenudireito{
     opacity: 1 !important;
 }
 /* Mobile First */
-/* HEADER BACKGROUND */
+/* HEADER */
 header{
-    background-color: #1B1426;
     height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    z-index: 20;
 
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    z-index: 20;
 }
-/* HEADER */
 header .headertop{
     display: none;
 }
-header .betweencenter{
+header .headerbottom{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-/* VER ESSA MERDA EM CASA PQ TA DANDO MERDA PUTA QUEO PARIU QUE BAGULHO CHATO */
-header .headerbottom{
-    position: fixed;
 }
 header .headerbottom .logo{
     width: 86px;
-    position: relative;
-    left: 30px;
 }
 header .headerbottom .menuesquerdo{
     position: fixed;
@@ -109,7 +94,7 @@ header .headerbottom .menuesquerdo{
     opacity: 0;
     z-index: 20;
 }
-header .headerbottom .menu .menuesquerdo a{
+header .headerbottom .menuesquerdo a{
     color: white;
     text-decoration: none;
     border-bottom: 2px solid #f9aa01;
@@ -121,10 +106,10 @@ header .headerbottom .menu .menuesquerdo a{
     text-align: center;
     padding: 30px 0px;
 }
-header .headerbottom .menu .menuesquerdo .email{
+header .headerbottom .menuesquerdo .email{
     border: none;
 }
-header .headerbottom .menu .midiasmobile {
+header .headerbottom .midiasmobile {
     width: 80vw;
 
     display: flex;
@@ -132,7 +117,7 @@ header .headerbottom .menu .midiasmobile {
     gap: 60px;
     /* O Gap e o espacamento entre os elementos de dentro da DIV. Neste caso o gap faz a distancia entre os icones que estao dentro da div midias mobile */
 }
-header .headerbottom .menu .midiasmobile a{
+header .headerbottom .midiasmobile a{
     border-bottom: none;
 }
 header .headerbottom #menudireito{
@@ -158,6 +143,7 @@ header .headerbottom #menudireito{
 }
 main{
     margin-top: 60px;
+
 }
 main .banner{
     width: 100vw;
@@ -168,9 +154,12 @@ main .banner{
     background-size: contain;
     background-position: bottom;
 
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border: 2px dotted yellow;
 }
 main .banner > h1{
     font-size: 40px;
