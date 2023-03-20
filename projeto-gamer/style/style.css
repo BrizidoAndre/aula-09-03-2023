@@ -88,6 +88,8 @@ header {
 
     display: flex;
     align-items: center;
+
+    background-color: #1B1426;
 }
 
 header .headertop {
@@ -300,4 +302,20 @@ main .novidades #novidade {
 main .time{
     height: 1535px;
     background-color: #f9aa01;
+}
+@media screen and (min-width: 1200px) {
+    /* Desaparecendo com os elementos inuteis do celular */
+    header .headerbottom{
+        display: none;
+    }
+    header .headertop{
+        display: block;
+        height: 50px;
+    }
+    .headerbottom{
+        position: static;
+    }
+    header{
+        background-color: #f9aa01;
+    }
 }
