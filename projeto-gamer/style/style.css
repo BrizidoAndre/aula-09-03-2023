@@ -1,61 +1,85 @@
 /* Importando as fontes necessarias para o projeto */
-@font-face {font-family: titil-black;
+@font-face {
+    font-family: titil-black;
     src: url(../assets/fonts/TitilliumWeb-Black.ttf);
 }
-@font-face {font-family: titil-bold;
+
+@font-face {
+    font-family: titil-bold;
     src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
 }
-@font-face {font-family: quicksand;
+
+@font-face {
+    font-family: quicksand;
     src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
 }
-@font-face {font-family: inter;
+
+@font-face {
+    font-family: inter;
     src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-h1{
+
+h1 {
     font-family: titil-black;
     font-size: 80px;
     text-shadow: 5px 5px 25px #FD4255;
     color: white;
     text-transform: capitalize;
 }
-h2{
+
+h2 {
     font-family: titil-black;
     font-size: 40px;
     color: white;
     text-transform: capitalize;
 }
-body{
+
+h3{
+    font-family: titil-black;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+}
+
+body {
     background-color: #1B1426;
     color: white;
 }
+
 /* Classes genericas */
-.layout-grid{
+.layout-grid {
     width: 90vw;
 
     margin: 0 auto;
     /* border: 1px solid salmon; */
 }
-.a{
+
+.a {
     text-decoration: none;
 }
+
 /* ANIMACOES PARA A ABERTURA DOS MENUS LATERAIS */
 /* O !important serve para aumentar o grau de importancia da regra */
-header .headerbottom .mostrarmenuesquerdo{
+header .headerbottom .mostrarmenuesquerdo {
     left: 0 !important;
     opacity: 1 !important;
 }
-header .headerbottom .mostrarmenudireito{
+
+header .headerbottom .mostrarmenudireito {
     right: 0 !important;
     opacity: 1 !important;
 }
+
 /* Mobile First */
 /* HEADER */
-header{
+header {
     height: 60px;
     width: 100vw;
     position: fixed;
@@ -65,18 +89,22 @@ header{
     display: flex;
     align-items: center;
 }
-header .headertop{
+
+header .headertop {
     display: none;
 }
-header .headerbottom{
+
+header .headerbottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header .headerbottom .logo{
+
+header .headerbottom .logo {
     width: 86px;
 }
-header .headerbottom .menuesquerdo{
+
+header .headerbottom .menuesquerdo {
     position: fixed;
     top: 60px;
     left: -80vw;
@@ -87,28 +115,31 @@ header .headerbottom .menuesquerdo{
     flex-direction: column;
 
     background-color: white;
-    background-image: linear-gradient(to right bottom, rgba( 27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
 
     transition: 0.5s;
     opacity: 0;
     z-index: 20;
 }
-header .headerbottom .menuesquerdo a{
+
+header .headerbottom .menuesquerdo a {
     color: white;
     text-decoration: none;
     border-bottom: 2px solid #f9aa01;
 
     font-family: inter;
     font-size: 15px;
-    text-transform:initial;
+    text-transform: initial;
 
     text-align: center;
     padding: 30px 0px;
 }
-header .headerbottom .menuesquerdo .email{
+
+header .headerbottom .menuesquerdo .email {
     border: none;
 }
+
 header .headerbottom .midiasmobile {
     width: 80vw;
 
@@ -117,10 +148,12 @@ header .headerbottom .midiasmobile {
     gap: 60px;
     /* O Gap e o espacamento entre os elementos de dentro da DIV. Neste caso o gap faz a distancia entre os icones que estao dentro da div midias mobile */
 }
-header .headerbottom .midiasmobile a{
+
+header .headerbottom .midiasmobile a {
     border-bottom: none;
 }
-header .headerbottom #menudireito{
+
+header .headerbottom #menudireito {
     position: fixed;
     top: 60px;
     right: -20vw;
@@ -138,18 +171,20 @@ header .headerbottom #menudireito{
     padding: 20px;
 
     background-color: white;
-    background-image: linear-gradient(to right bottom, rgba( 27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
 }
-main{
+
+main {
     margin-top: 60px;
 
 }
-main .banner{
+
+main .banner {
     width: 100vw;
     height: 606px;
     background-color: #1B1426;
-    background-image:url(../assets/images/background/valorant-pergunte-3-scaled\ 1\ 1.png);
+    background-image: url(../assets/images/background/valorant-pergunte-3-scaled\ 1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
@@ -158,16 +193,20 @@ main .banner{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
-    border: 2px dotted yellow;
+    /* border: 2px dotted yellow; */
 }
-main .banner > h1{
+
+main .banner>h1 {
     font-size: 40px;
+    margin-top: 10px;
 }
-main .banner .botaosobre{
+
+main .banner .botaosobre {
     background-color: #f9aa01;
     border-radius: 8px;
-    margin-bottom: 85px;
+    margin-bottom: 90px;
     width: 171px;
     height: 40px;
 
@@ -179,4 +218,86 @@ main .banner .botaosobre{
     font-family: titil-black;
     font-weight: bold;
     font-size: 24px;
+    text-decoration: none;
+}
+
+main .novidades {
+    height: 590px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+main .novidades .card {
+    width: 335px;
+    height: 189px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+}
+
+main .novidades .card:hover .paralelograma {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    margin-left: 0px;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+main .novidades .card:hover .paralelograma > h3{
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+}
+main .novidades .efeitoblur {
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    align-items: center;
+}
+
+main .novidades .efeitoblur .paralelograma {
+    width: 175px;
+    height: 40px;
+    -webkit-transform: skew(-40deg);
+    -moz-transform: skew(-40deg);
+    -o-transform: skew(-40deg);
+
+    background-color: #f9aa01;
+
+    margin-left: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    transition: 1s;
+}
+main .novidades .efeitoblur .paralelograma > h3{
+    position: absolute;
+    -webkit-transform: skew(40deg);
+    -moz-transform: skew(40deg);
+    -o-transform: skew(40deg);
+    transition: none;
+}
+
+main .novidades #popular {
+    background-image: url(../assets/images/background/ea-sports-fifa-23-is-coming-to-the-epic-games-store-1920x1080-398e19351a82\ 1.png);
+}
+
+main .novidades #novidade {
+    background-image: url(../assets/images/background/ea-sports-fifa-23-is-coming-to-the-epic-games-store-1920x1080-398e19351a82\ 1\ \(1\).png);
+}
+main .time{
+    height: 1535px;
+    background-color: #f9aa01;
 }
